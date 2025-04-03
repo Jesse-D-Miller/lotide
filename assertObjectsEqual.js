@@ -44,9 +44,9 @@ const eqObjects = (object1, object2) => {
 const assertObjectsEqual = (actual, expected) => {
   const inspect = require("util").inspect;
   if (eqObjects(actual, expected)) {
-    return console.log(`✅✅✅ Input Objects Match: ${inspect(actual)} === ${inspect(expected)}`);
+    return (`✅✅✅ Input Objects Match: ${inspect(actual)} === ${inspect(expected)}`);
   } else {
-    return console.log(`🛑🛑🛑 Input Objects DO NOT Match: ${inspect(actual)} !== ${inspect(expected)}`);
+    return (`🛑🛑🛑 Input Objects DO NOT Match: ${inspect(actual)} !== ${inspect(expected)}`);
   }
 };
 
