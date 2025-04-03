@@ -44,10 +44,10 @@ const eqArrays = function(arr1, arr2) {
 };
 
 const result = letterPositions(" hello world");
-assertArraysEqual(eqArrays(result["h"], [1]), true);
-assertArraysEqual(eqArrays(result["e"], [2]), true);
-assertArraysEqual(eqArrays(result["l"], [3, 4, 10]), true);
-assertArraysEqual(eqArrays(result["o"], [5, 8]), true);
-assertArraysEqual(eqArrays(result["w"], [7]), true);
-assertArraysEqual(eqArrays(result["r"], [9]), true);
-assertArraysEqual(eqArrays(result["d"], [11]), true);
+assertArraysEqual(result["h"], [1]);
+assertArraysEqual(result["e"], [2]);
+assertArraysEqual(result["l"], [3, 4, 10]);
+assertArraysEqual(result["o"], [5, 8]);
+assertArraysEqual(result["w"], [7]);
+assertArraysEqual(result["r"], [9]);
+assertArraysEqual(result["d"], [11]);
