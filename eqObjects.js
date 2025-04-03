@@ -26,26 +26,26 @@ const eqObjects = function(object1, object2) {
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
 
-  if (keys1.length !== keys2.length){
-    return false; 
+  if (keys1.length !== keys2.length) {
+    return false;
   }
   
-  for (key of keys1) {
+  for (const key of keys1) {
     const value1 = object1[key];
     const value2 = object2[key];
 
     if (Array.isArray(value1)) {
-      if (!eqArrays(value1, value2)){
+      if (!eqArrays(value1, value2)) {
         return false;
       }
       continue;
     }
 
-    if (value1 !== value2){
+    if (value1 !== value2) {
       return false;
     }
+  }
 
-  } 
   return true;
 };
 //   return true;
@@ -53,7 +53,7 @@ const eqObjects = function(object1, object2) {
 //     for (const keys in object1) {
 //       if (object1[keys] !== object2[keys]) {
 //         // are both arrays and do they match VVV
-//         if (!eqArrays(object1[keys], object2[keys] || !object1[keys].isArray || !object2[keys].isArray)){ 
+//         if (!eqArrays(object1[keys], object2[keys] || !object1[keys].isArray || !object2[keys].isArray)){
 //           return false;
 //         }
 //       }
@@ -72,4 +72,4 @@ const inputObject2 = {make: "Honda", colour: ["red", "black"]};
 assertEqual(eqObjects(inputObject1, inputObject2), true); //=>true
 
 const inputObject3 = {make: "Honda", colour: ["red", "black"], model: "Civic"};
-assertEqual(eqObjects(inputObject1, inputObject3), false) //=>false
+assertEqual(eqObjects(inputObject1, inputObject3), false); //=>false
