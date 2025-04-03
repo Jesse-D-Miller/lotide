@@ -13,7 +13,7 @@ const assertEqual = function(actual, expected) {
 //declare fn countLetter
 //define outputObject locally
 //declare array locally
-//  split() 
+//  split()
 //sort array alphabetically
 //loop accross array to count
 //  if " " splice (i, 1)
@@ -27,13 +27,13 @@ const countLetters = function(str) {
   let outputObject = {};
   let strArrSort = [];
   let count = 0;
-  strArrSort = str.toLowerCase().split("");
+  strArrSort = str.split(""); //.toLowerCase() i put this in but it wasnt required aparently but i like it
   strArrSort.sort();
-  for (let i = 0; i < strArrSort.length; i++){
-    if(strArrSort[i] === " ") {
+  for (let i = 0; i < strArrSort.length; i++) {
+    if (strArrSort[i] === " ") {
       strArrSort.splice(i, 1);
       i--;
-    } else if(strArrSort[i] === strArrSort[i + 1] && i < strArrSort.length - 1) {
+    } else if (strArrSort[i] === strArrSort[i + 1] && i < strArrSort.length - 1) {
       count++;
     } else {
       count++;
@@ -63,7 +63,8 @@ assertEqual(result["o"], 4);
 assertEqual(result["p"], 1);
 assertEqual(result["q"], 1);
 assertEqual(result["r"], 2);
-assertEqual(result["s"], 2);
+assertEqual(result["S"], 1);
+assertEqual(result["s"], 1);
 assertEqual(result["t"], 2);
 assertEqual(result["u"], 2);
 assertEqual(result["v"], 1);
