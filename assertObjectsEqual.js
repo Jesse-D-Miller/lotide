@@ -52,7 +52,7 @@ const assertObjectsEqual = (actual, expected) => {
 
 const brandonSandersonBooks = {
   author: "Brandon Sanderson",
-  totalBooksPublished: 50,  
+  totalBooksPublished: 50,
   mostFamousSeries: ["Mistborn", "The Stormlight Archive", "The Reckoners", "Warbreaker"],
   firstPublishedBook: "Elantris",
   cosmereUniverse: true,
@@ -65,7 +65,7 @@ const brandonSandersonBooks = {
 
 const brandonSandersonBooksAlso = {
   author: "Brandon Sanderson",
-  totalBooksPublished: 50,  
+  totalBooksPublished: 50,
   mostFamousSeries: ["Mistborn", "The Stormlight Archive", "The Reckoners", "Warbreaker"],
   firstPublishedBook: "Elantris",
   cosmereUniverse: true,
@@ -78,7 +78,7 @@ const brandonSandersonBooksAlso = {
 
 const notBrandonSandersonBooks = {
   author: "Not Brandon Sanderson",
-  totalBooksPublished: 50,  
+  totalBooksPublished: 50,
   mostFamousSeries: ["Mistborn", "The Stormlight Archive", "The Reckoners", "Warbreaker"],
   firstPublishedBook: "Elantris",
   cosmereUniverse: true,
