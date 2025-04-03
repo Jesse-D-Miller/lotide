@@ -17,17 +17,16 @@ const letterPositions = function(sentences) {
       } else {
         results[splitArr[i]].push(i);
       }
-      
     }
   }
   return results;
 };
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+const assertArraysEqual = function(array1, array2) {
+  if (eqArrays(array1, array2)) {
+    console.log(`✅✅✅ Input Arrays Match: ${array1} === ${array2}`);
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`🛑🛑🛑 Input Arrays DO NOT Match: ${array1} !== ${array2}`);
   }
 };
 
@@ -45,10 +44,10 @@ const eqArrays = function(arr1, arr2) {
 };
 
 const result = letterPositions(" hello world");
-assertEqual(eqArrays(result["h"], [1]), true);
-assertEqual(eqArrays(result["e"], [2]), true);
-assertEqual(eqArrays(result["l"], [3, 4, 10]), true);
-assertEqual(eqArrays(result["o"], [5, 8]), true);
-assertEqual(eqArrays(result["w"], [7]), true);
-assertEqual(eqArrays(result["r"], [9]), true);
-assertEqual(eqArrays(result["d"], [11]), true);
+assertArraysEqual(eqArrays(result["h"], [1]), true);
+assertArraysEqual(eqArrays(result["e"], [2]), true);
+assertArraysEqual(eqArrays(result["l"], [3, 4, 10]), true);
+assertArraysEqual(eqArrays(result["o"], [5, 8]), true);
+assertArraysEqual(eqArrays(result["w"], [7]), true);
+assertArraysEqual(eqArrays(result["r"], [9]), true);
+assertArraysEqual(eqArrays(result["d"], [11]), true);
