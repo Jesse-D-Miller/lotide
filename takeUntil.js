@@ -70,26 +70,25 @@ const takeUntil = (array, callback) => {
 
   for (let i = 0; i < array.length; i++) {
     //if statement for false return sliced string at index
-    if (callback(array, i)){
+    if (callback(array, i)) {
       slicedArray = array.slice(0, i);
       return slicedArray;
     }
   }
-
-}
+};
 
 //these commented out test casses all work a some of the time, i think that its because they are very random and there is some unknown interaction, i dont think the arrays are the issue, i think it is how they are generated. im not going to use these for now.
 
 //let expectedArray = [1]; //unknown as array is random
 //assertArraysEqual(takeUntil(randomNumbers, (array, i) => array[i] > 75), expectedArray);
 
-//expectedArray = [2]; //unknown as array is random 
+//expectedArray = [2]; //unknown as array is random
 //assertArraysEqual(takeUntil(randomBooleans, (array, i) => array[i] === true), expectedArray);
 
 //expectedArray = [3]; //unknown as array is random
 //assertArraysEqual(takeUntil(randomLetters, (array, i) => array[i] === "a"), expectedArray);
 
-expectedArray = ["apple", "banana", "cherry"];
+let expectedArray = ["apple", "banana", "cherry"];
 assertArraysEqual(takeUntil(randomWords, (array, i) => array[i] === "dog"), expectedArray);
 
 expectedArray = [-14, -94, 66, -29, 52, -4, -43, -32, -92];
