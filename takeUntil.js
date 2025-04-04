@@ -70,7 +70,7 @@ const takeUntil = (array, callback) => {
 
   for (let i = 0; i < array.length; i++) {
     //if statement for false return sliced string at index
-    if (callback(array, i)) {
+    if (callback(array[i])) {
       slicedArray = array.slice(0, i);
       return slicedArray;
     }
@@ -89,13 +89,13 @@ const takeUntil = (array, callback) => {
 //assertArraysEqual(takeUntil(randomLetters, (array, i) => array[i] === "a"), expectedArray);
 
 let expectedArray = ["apple", "banana", "cherry"];
-assertArraysEqual(takeUntil(randomWords, (array, i) => array[i] === "dog"), expectedArray);
+assertArraysEqual(takeUntil(randomWords, (item) => item === "dog"), expectedArray);
 
 expectedArray = [-14, -94, 66, -29, 52, -4, -43, -32, -92];
-assertArraysEqual(takeUntil(randomNumbers100, (array, i) => array[i] > 72), expectedArray);
+assertArraysEqual(takeUntil(randomNumbers100, (item) => item > 72), expectedArray);
 
 expectedArray = [true, true, true, true];
-assertArraysEqual(takeUntil(randomBooleans10, (array, i) => array[i] === false), expectedArray);
+assertArraysEqual(takeUntil(randomBooleans10, (item) => item === false), expectedArray);
 
 expectedArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
-assertArraysEqual(takeUntil(alphabet, (array, i) => array[i] === "k"), expectedArray);
+assertArraysEqual(takeUntil(alphabet, (item) => item === "k"), expectedArray);
