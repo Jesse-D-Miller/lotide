@@ -62,6 +62,8 @@ const map = function(array, callback) {
 
 };
 
+// map function takes an array and a callback function as arguments
+// It returns a new array that contains the results of calling the callback function on each element of the original array
 const mapAString = map(stormlightBooks, (book) => book[0]);
 
 
