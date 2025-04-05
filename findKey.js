@@ -1,21 +1,8 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length === arr2.length) {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
-    return false;
-  }
-  return true;
-};
-
-const assertArraysEqual = function(array1, array2) {
-  if (eqArrays(array1, array2)) {
-    console.log(`✅✅✅ Input Arrays Match: ${array1} === ${array2}`);
-  } else {
-    console.log(`🛑🛑🛑 Input Arrays DO NOT Match: ${array1} !== ${array2}`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
 
@@ -42,7 +29,8 @@ const assertArraysEqual = function(array1, array2) {
 //return Key
 const findKey = (inputObject, callback) => {
   for (const keys in inputObject) {
-    if (callback(keys)){
+  
+    if (callback(inputObject[keys])){
       return keys;
     }
   }
@@ -65,6 +53,14 @@ const fantasyWeapons = {
 //takes a key and checks it against a condition
   // if key === condition
   //return truthy if power level = 10
-const callbackKeyComparison = (key) => {key.powerlevel === 10};
+
+const callbackKeyComparison = (weapon) => {
+  if (weapon.powerLevel === 10) {
+    return true;
+  }
+  return false;  
+};
 
 //assert equals calls for test cases
+
+assertEqual(findKey(fantasyWeapons, callbackKeyComparison), "Mjolnir");
