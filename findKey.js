@@ -54,12 +54,7 @@ const fantasyWeapons = {
   // if key === condition
   //return truthy if power level = 10
 
-const callbackKeyComparison = (weapon) => {
-  if (weapon.powerLevel === 10) {
-    return true;
-  }
-  return false;  
-};
+const callbackKeyComparison = (weapon) => (weapon.powerLevel === 10);
 
 //assert equals calls for test cases
 
