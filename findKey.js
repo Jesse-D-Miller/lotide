@@ -42,8 +42,11 @@ const assertArraysEqual = function(array1, array2) {
 //return Key
 const findKey = (inputObject, callback) => {
   for (const keys in inputObject) {
-    
+    if (callback(keys)){
+      return keys;
+    }
   }
+  return undefined;
 };
 
 // create input objects here
