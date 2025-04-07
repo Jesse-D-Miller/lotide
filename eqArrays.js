@@ -1,4 +1,5 @@
 //this function works compares 2 arrays
+//it takes in two arrays as arguements and compares the lengths, if the lengths match it will compare arrays element by element
 
 const eqArrays = function(arr1, arr2) {
   if (arr1.length === arr2.length) {
