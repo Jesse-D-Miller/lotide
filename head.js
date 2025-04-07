@@ -1,21 +1,9 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// code takes an iinput array and outputs (returns) the 0th element, the head, of the array
 
 const head = function(arr) {
   return arr[0];
 };
 
-assertEqual(head([5, 6, 7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head(["lighthouse labs", 6, 7]), "Bootcamp");
-assertEqual(head([0, 6, 7]),  1);
-assertEqual(head([-1, 6, 7]),  "lighthouse labs");
-assertEqual(head([-1, 6, 7]),  -1);
-assertEqual(head([100, 6, 7]),  10);
-assertEqual(head([]),  10);
-assertEqual(head([100]),  10);
+module.exports = head;
+
+//test code in test folder

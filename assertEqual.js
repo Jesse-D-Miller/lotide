@@ -1,3 +1,5 @@
+// this code takes in two primitve values, compares them to eachother and outputs an assertion depending on whether they match or not
+
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -6,9 +8,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-//test code
-assertEqual("lighthouse labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual("lighthouse labs", "lighthouse labs");
-assertEqual(1, -1);
-assertEqual(1, 10);
+module.exports = assertEqual;
+
+//test code in test folder
