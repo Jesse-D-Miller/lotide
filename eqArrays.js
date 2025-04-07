@@ -1,5 +1,4 @@
 //this function works compares 2 arrays
-//note: assertEqual is required for functionality
 
 const eqArrays = function(arr1, arr2) {
   if (arr1.length === arr2.length) {
