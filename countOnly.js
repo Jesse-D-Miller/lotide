@@ -23,10 +23,10 @@ const assertEqual = function(actual, expected) {
 
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object specifying what to count
-const countOnly = function (allItems, itemsToCount) {
-  outputObject = {};
+const countOnly = function(allItems, itemsToCount) {
+  let outputObject = {};
   for (const keys in itemsToCount) {
-    if (itemsToCount[keys] === true){
+    if (itemsToCount[keys] === true) {
       let count = 0;
       for (const value of allItems) {
         if (keys === value) {

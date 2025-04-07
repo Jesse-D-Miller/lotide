@@ -30,22 +30,22 @@ const assertArraysEqual = function(array1, array2) {
 //if .length odd
   //subtract 1 from length => divide/2 => add +1
 
-  const middle = function(sourceArray) {
-    let middleElement = [];
-    if(sourceArray.length <= 2) {
-      return middleElement;
-    } else if (sourceArray.length % 2 === 0) {
-      //return middle 2 elements
-      middleElement = [
-        sourceArray[(sourceArray.length / 2) - 1],
-        sourceArray[sourceArray.length / 2]
-      ];
-    } else {
-      //this is odd and returns middle element
-      middleElement = [sourceArray[(sourceArray.length -1) / 2]]
-    }
+const middle = function(sourceArray) {
+  let middleElement = [];
+  if (sourceArray.length <= 2) {
     return middleElement;
-  };
+  } else if (sourceArray.length % 2 === 0) {
+    //return middle 2 elements
+    middleElement = [
+      sourceArray[(sourceArray.length / 2) - 1],
+      sourceArray[sourceArray.length / 2]
+    ];
+  } else {
+    //this is odd and returns middle element
+    middleElement = [sourceArray[(sourceArray.length - 1) / 2]];
+  }
+  return middleElement;
+};
 
 assertArraysEqual(middle([1, 2, 3]), [2]);
 assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);

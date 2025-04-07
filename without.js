@@ -31,12 +31,12 @@ const assertArraysEqual = function(array1, array2) {
 
 const without = function(sourceArray, itemsToRemoveArray) {
   let modArr = [];
-  for (let values of sourceArray){
+  for (let values of sourceArray) {
     modArr.push(values);
   }
-  for (i = 0; i < itemsToRemoveArray.length; i++){
-    for (j = 0; j < modArr.length; j++){
-      if (modArr[j] === itemsToRemoveArray[i]){
+  for (let i = 0; i < itemsToRemoveArray.length; i++) {
+    for (let j = 0; j < modArr.length; j++) {
+      if (modArr[j] === itemsToRemoveArray[i]) {
         modArr.splice(j, 1);
         j--;
       }
@@ -48,7 +48,7 @@ const without = function(sourceArray, itemsToRemoveArray) {
 //test to check that sourceArray is not modified
 
 const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); 
+without(words, ["lighthouse"]);
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
 //tests should call without
@@ -57,7 +57,7 @@ assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 //pass modifiedArray and Expected array to assertArraysEqual fn
 
 let modifiedArray = without([1, 2, 3], [1]); // => [2, 3]
-assertArraysEqual(modifiedArray, [2, 3])
+assertArraysEqual(modifiedArray, [2, 3]);
 
 modifiedArray = without(["cat", "dog", "hamster", "five bucks"], ["five bucks", "carrot", "whistle", "trip"]);
 assertArraysEqual(modifiedArray, ["cat", "dog", "hamster"]);
