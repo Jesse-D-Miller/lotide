@@ -1,6 +1,5 @@
 const assert   = require('chai').assert;
 const tail     = require('../tail');
-const eqArrays = require("../eqArrays");
 let inputArray = [];
 expectedOutput = [];
 
@@ -9,14 +8,14 @@ describe("#tail", () => {
   it("should return ['Lighthouse', 'Labs'] when given the input ['Hello', 'Lighthouse', 'Labs']", () => {
     inputArray = ["Hello", "Lighthouse", "Labs"];
     expectedOutput = ["Lighthouse", "Labs"];
-    assert(eqArrays(tail(inputArray), expectedOutput));
+    assert.deepEqual(tail(inputArray), expectedOutput);
   });
 
   it("should return leave the original array unchanged", () => {
     inputArray = ["dog water", "video", "games"];
     expectedOutput = ["dog water", "video", "games"];
     tail(inputArray);
-    assert(eqArrays(inputArray, expectedOutput));
+    assert.deepEqual(inputArray, expectedOutput);
   });
 
   it("should return undefined when passed an array of length 1", () => {
